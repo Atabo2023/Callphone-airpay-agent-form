@@ -15,6 +15,8 @@
   /* background-color: #fff; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: #f4f4f6;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
   /* color:  */
 }
 
@@ -31,6 +33,7 @@
   flex: 50%;
   /* background-color: black; */
   /* height: 100vh; */
+  margin-top: 0.8rem;
 }
 
 .form {
@@ -42,6 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* margin-top: 2rem; */
 }
 .Form {
   /* background-color: #fff; */
@@ -78,10 +82,9 @@
 }
 
 .CallphoneAirpayAgentForm input[type="text"],
-input[type=" number"],
-input[type="password"],
-input[type="BVN"],
-input [type="Number"] {
+input[type="number"],
+input[type="phonenumber"],
+input[type="BVN"] {
   width: 100%;
   height: 2rem;
   padding: 5px 10px;
@@ -99,13 +102,16 @@ input [type="Number"] {
   /* background-color: #ffe400; */
   background-color: #23059e;
   color: #fff;
-  width: 100%;
+  width: 50%;
   padding: 5px 10px;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
   border-radius: 5px;
-  margin: 1rem 0;
+  display: block;
+
+  margin: auto;
+  margin-top: 1rem;
 }
 
 .error_container {

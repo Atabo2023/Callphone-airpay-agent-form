@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { useFormik } from "formik";
 import App from "../../App";
 // import react from "react";
-import { useRef, useState } from "react";
+import React, { useState, useRef, createRef } from "react";
 
 const initialValues = {
   AgentFullName: "",
@@ -18,52 +18,43 @@ const initialValues = {
   TaxIdentificationNumber: "",
 };
 
-// import React, { useState } from 'react';
-
-// function MyComponent() {
-//   const [inputValue, setInputValue] = useState('');
-
-//   const handleKeyPress = (event) => {
-//     if (event.key === 'Enter') {
-//       // Trigger next action here
-//       console.log('Enter key pressed, next action triggered');
-//     }
-//   };
-
-//   const handleChange = (event) => {
-//     setInputValue(event.target.value);
-//   };
-
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         value={inputValue}
-//         onChange={handleChange}
-//         onKeyPress={handleKeyPress}
-//       />
-//       <button onClick={() => console.log('Button clicked, next action triggered')}>
-//         Next
-//       </button>
-//     </div>
-//   );
-// }
-
-// export default MyComponent
-
 function Form() {
-  const [inputValue, setInputValue] = useState("");
-  const handleKeyPress = (event) => {
+  const [inputs, setInputs] = useState("");
+
+  const inputsRef = useRef({
+    AgentFullName: React.createRef(),
+    Town: React.createRef(),
+    LGA: React.createRef(),
+    State: React.createRef(),
+    AgentBusinessName: React.createRef(),
+    AgentBusinessLocation: React.createRef(),
+    AgentsRegisteredPhoneNumber: React.createRef(),
+    AgentsBVNNumber: React.createRef(),
+    AgentsNationalIdentityNumber: React.createRef(),
+    TaxIdentificationNumber: React.createRef(),
+  });
+
+  const handleKeyPress = (event, inputName) => {
     if (event.key === "Enter") {
-      event.preventDefault();
-      if (initialValues && initialValues.current) {
-        initialValues.current.focus();
+      const nextInputName = getNextInputName(inputName);
+      if (nextInputName) {
+        inputsRef.current[nextInputName].focus();
+        console.log(handleKeyPress);
       }
-      // Trigger next action here
+      // event.preventDefault();
+      // if (initialValues && initialValues.current) {
+      //   initialValues.current.focus();
+      //   setInputValue("");
+      // }
+      // // Trigger next action here
       // console.log(`Enter key Pressed!, next action triggered ${inputValue}`);
       // setInputValue("");
     }
     // console.log(handleKeyPress);
+  };
+
+  const getNextInputName = (currentInpiutName) => {
+    const inputNames = Object.keys(inputs);
   };
 
   // const handleChange = (event) => {
@@ -90,6 +81,8 @@ function Form() {
   // const handleChange = (event) => {
   //   setInputValue(event.target.value);
   // }
+
+  // const handlekeyDown = e;
 
   return (
     <>
@@ -153,6 +146,10 @@ function Form() {
               request; Callphone reserve the right to charge merchant value of
               asset for replacement
             </p>
+            {/* <input>
+              type="checkbox"
+              <label> I agreed with the term and conditions </label>
+            </input> */}
             <p></p>
           </div>
         </div>
@@ -164,15 +161,17 @@ function Form() {
               <input
                 type="text"
                 name="AgentName"
-                values={values.AgentFullName}
+                values={inputsRef.AgentFullName}
                 onBlur={handleBlur}
                 onChange={handleChange}
-                onKeyDown={handleKeyPress}
+                onKeyDown={(handleKeyPress) => Form(event, "AgentFullName")}
+                ref={inputsRef.current.AgentFullName}
               />
 
               <label htmlFor="AgentName">Town:</label>
               <input
                 type="text"
+                npm
                 name="AgentName"
                 values={values.Town}
                 onBlur={handleBlur}
@@ -241,7 +240,8 @@ function Form() {
                 Agents National Identity Number:
               </label>
               <input
-                type="Number"
+                type="number"
+                maxLength="15"
                 name="AgentName"
                 values={values.AgentsNationalIdentityNumber}
                 onBlur={handleBlur}
@@ -255,7 +255,7 @@ function Form() {
                 onBlur={handleBlur}
                 onChange={handleChange}
               />
-              {/* <button onClick=(onClick)=>{"handleSubmit"}>Submit</button> */}
+              <button className="btn">Submit</button>
             </form>
           </div>
         </div>
@@ -265,125 +265,3 @@ function Form() {
   );
 }
 export default Form;
-
-/* 
-<Formik initialValues={initialValues} onSubmit={onSubmit}>
-            {({ action, touched }) => (
-              <Form className="CallphoneAirpayAgentForm">
-                <label htmlFor="AgentName">Agent Full Name:</label>
-                <Field type="text" name="AgentName" />
-
-                <label htmlFor="AgentName">Town:</label>
-                <Field type="text" name="AgentName" />
-
-                <label htmlFor="AgentName">LGA:</label>
-                <Field type="text" name="AgentName" />
-
-                <label htmlFor="AgentName">State:</label>
-                <Field type="text" name="AgentName" />
-
-                <label htmlFor="AgentName">Agent Business Name:</label>
-                <Field type="text" name="AgentName" />
-
-                <label htmlFor="AgentName">Agent's Business Location:</label>
-                <Field type="text" name="AgentName" />
-
-                <label htmlFor="AgentName">
-                  Agent's Registered Phone Number:
-                </label>
-                <Field type="number" name="AgentName" maxLength="11" />
-
-                <label htmlFor="AgentName">Agent's BVN Number:</label>
-                <Field type="number" name="AgentName" maxLength="11" />
-
-                <label htmlFor="AgentName">
-                  Agents National Identity Number:
-                </label>
-                <Field type="number" name="AgentName" maxLength="15" />
-
-                <label htmlFor="AgentName">
-                  Tax Identification Number(TIN):
-                </label>
-                <Field type="text" name="AgentName" />
-
-                <button type="submit">Submit</button>
-              </Form> */
-// }    <div className="rows">
-//             <label style={{ display: "block" }} htmlFor="agentName">
-//               Agent Home Address:
-//             </label>
-//             <input
-//               style={{ width: "35rem", height: "2rem" }}
-//               className="agentInput"
-//               type="text"
-//               id="name"
-//             ></input>
-//           </div>
-
-//           <div className="rows">
-//             <label style={{ display: "block" }} htmlFor="agentName">
-//               Town:
-//             </label>
-//             <input
-//               style={{ width: "35rem", height: "2rem" }}
-//               className="agentInput"
-//               type="text"
-//               id="name"
-//             ></input>
-//           </div>
-
-//           <div className="rows">
-//             <label style={{ display: "block" }} htmlFor="agentName">
-//               State:
-//             </label>
-//             <input
-//               style={{ width: "35rem", height: "2rem" }}
-//               className="agentInput"
-//               type="text"
-//               id="name"
-//             ></input>
-//           </div>
-
-//           <div className="rows">
-//             <label style={{ display: "block" }} htmlFor="agentName">
-//               Agent Business Name:
-//             </label>
-//             <input
-//               style={{ width: "35rem", height: "2rem" }}
-//               className="agentInput"
-//               type="text"
-//               id="name"
-//             ></input>
-//           </div>
-//           <div className="rows">
-//             <label style={{ display: "block" }} htmlFor="agentName">
-//               Agent Business Location(address):
-//             </label>
-//             <input
-//               style={{ width: "35rem", height: "2rem" }}
-//               className="agentInput"
-//               type="text"
-//               id="name"
-//             ></input>
-//           </div>
-//         </form>
-//       </div>
-
-//       <section>
-//         <form>
-//           <div className="rows">
-//             <label style={{ display: "block" }} htmlFor="agentName">
-//               Agent Full Name:
-//             </label>
-//             <input
-//               style={{ width: "35rem", height: "2rem" }}
-//               className="agentInput"
-//               type="text"
-//               id="name"
-//             ></input>
-//           </div>
-//         </form>
-//       </section>
-//     </>
-//   );
-// };
