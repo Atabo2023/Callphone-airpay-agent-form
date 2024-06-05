@@ -146,6 +146,20 @@ function Form() {
               request; Callphone reserve the right to charge merchant value of
               asset for replacement
             </p>
+            <form>
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="condition"
+              />
+              <label htmlFor="terms">
+                {" "}
+                I agreed to the terms and conditions
+              </label>
+              <br></br>
+              {/* <input type="text" /> */}
+            </form>
             {/* <input>
               type="checkbox"
               <label> I agreed with the term and conditions </label>
@@ -265,3 +279,11 @@ function Form() {
   );
 }
 export default Form;
+
+// function Form() {
+//   const [inputValue, setInputValue] = useState("");
+//   const handleKeyPress = (event) => {
+//     if (event.key === "Enter") {
+//       event.preventDefault();
+//       if (initialValues && initialValues.current) {
+//         initialValues.current.focus();
