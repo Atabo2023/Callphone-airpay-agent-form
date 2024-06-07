@@ -53,10 +53,6 @@ function Form() {
     // console.log(handleKeyPress);
   };
 
-  const getNextInputName = (currentInpiutName) => {
-    const inputNames = Object.keys(inputs);
-  };
-
   // const handleChange = (event) => {
   //   setInputValue(event.target.value);
   // };
@@ -77,10 +73,6 @@ function Form() {
   //   console.log("Enter key ScriptProcessorNode, net action triggered")
   // }
   // };
-
-  // const handleChange = (event) => {
-  //   setInputValue(event.target.value);
-  // }
 
   // const handlekeyDown = e;
 
@@ -146,7 +138,7 @@ function Form() {
               request; Callphone reserve the right to charge merchant value of
               asset for replacement
             </p>
-            <form>
+            <form className="conditions">
               <input
                 type="checkbox"
                 id="terms"
@@ -158,12 +150,8 @@ function Form() {
                 I agreed to the terms and conditions
               </label>
               <br></br>
-              {/* <input type="text" /> */}
             </form>
-            {/* <input>
-              type="checkbox"
-              <label> I agreed with the term and conditions </label>
-            </input> */}
+
             <p></p>
           </div>
         </div>
@@ -178,7 +166,7 @@ function Form() {
                 values={inputsRef.AgentFullName}
                 onBlur={handleBlur}
                 onChange={handleChange}
-                onKeyDown={(handleKeyPress) => Form(event, "AgentFullName")}
+                onKeyDown={(handleKeyPress) => Form(inputs, "AgentFullName")}
                 ref={inputsRef.current.AgentFullName}
               />
 
@@ -269,7 +257,7 @@ function Form() {
                 onBlur={handleBlur}
                 onChange={handleChange}
               />
-              <button className="btn">Submit</button>
+              <button onClick={handleSubmit}>Submit {inputs}</button>
             </form>
           </div>
         </div>

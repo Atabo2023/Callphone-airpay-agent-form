@@ -14,7 +14,7 @@
   flex: 50%;
   /* background-color: #fff; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: #f4f4f6;
+  background: #fff;
   margin-top: 2rem;
   margin-left: 1.5rem;
   /* color:  */
@@ -68,7 +68,7 @@
 
 .CallphoneAirpayAgentForm {
   /* background: #101010; */
-  background: #4834d4;
+  background: #f4f4f6;
   padding: 20px 30px;
   border-radius: 5px;
   font-size: 20px;
@@ -79,6 +79,7 @@
 
 .CallphoneAirpayAgentForm label {
   font-weight: 500;
+  color: #555;
 }
 
 .CallphoneAirpayAgentForm input[type="text"],
