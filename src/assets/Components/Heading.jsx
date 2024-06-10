@@ -17,7 +17,7 @@ const Heading = () => {
         }}
       >
         <h2>Wants to become an agent?</h2>
-        <p>fill the below form to get your journey started with airpay</p>
+        <p>fill the form below to get your journey started with airpay</p>
       </div>
     </>
   );

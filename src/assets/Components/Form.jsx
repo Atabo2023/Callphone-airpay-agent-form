@@ -158,7 +158,7 @@ function Form() {
 
         <div className="column2">
           <div className="form" onSubmit={handleSubmit}>
-            <form className="CallphoneAirpayAgentForm">
+            {/* <form className="CallphoneAirpayAgentForm">
               <label htmlFor="AgentName">Agent Full Name:</label>
               <input
                 type="text"
@@ -258,6 +258,113 @@ function Form() {
                 onChange={handleChange}
               />
               <button onClick={handleSubmit}>Submit {inputs}</button>
+            </form> */}
+            <form className="formBox">
+              <div className="dot1">
+                <p className="dot">1</p>
+                <p className="border"></p>
+                <p className="dot">2</p>
+                <p className="border"></p>
+                <p className="dot">3</p>
+                {/* <div>
+                  <span>2</span>
+                </div>
+                <p>
+                  <span>3</span>
+                </p> */}
+              </div>
+              <h3>Personal Information</h3>
+              <label htmlFor="lastName">Last name</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Surname"
+              />
+              <br />
+              <label htmlFor="FirstName">First name</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="first name"
+                name="first name"
+                placeholder="first name"
+              />
+              <br />
+              <label htmlFor="phoneNumber">Phone number</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="phone number"
+                name="phone number"
+                placeholder="+234"
+              />
+              <br />
+              <label htmlFor="homeAddress">Home Address</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="Home address"
+                name="Home address"
+                placeholder="Home address"
+              />
+              <br />
+              <label htmlFor="state">State</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="state"
+                name="state"
+                placeholder="select"
+              />
+              <br />
+              <label htmlFor="city">City</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="city"
+                name="city"
+                placeholder="select"
+              />
+              <br />
+              <label htmlFor="LGA">L.G.A</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="LGA"
+                name="LGA"
+                placeholder="select"
+              />
+              <br />
+              <label htmlFor="bvn">BVN</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="BVN"
+                name="BVN"
+                placeholder="BVN"
+              />
+              <br />
+              <label htmlFor="nin">NIN Number</label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                id="nin"
+                name="nin"
+                placeholder="NIN"
+              />
+              <br />
+              <button onClick={handleSubmit}>next</button>
             </form>
           </div>
         </div>
