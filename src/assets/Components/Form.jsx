@@ -83,7 +83,7 @@ function Form() {
           <div className="AgentsTerms">
             <li className="terms">
               To express insterest either identify yourself as a potential agent
-              or reach out to us through <p>contact form</p>
+              or reach out to us through contact form
             </li>
             <li>
               Ensure that your business location is valid and visible, with
@@ -137,6 +137,14 @@ function Form() {
               If the terminal and accessory is not returned at retrieval
               request; Callphone reserve the right to charge merchant value of
               asset for replacement
+            </li>
+            <li>
+              An agent must be able to render financial service and should be
+              able to
+            </li>
+            <li>
+              commit a minimum working capital of 50,000 (if a non register
+              business) and 250, 000 (if a Registered business)
             </li>
             <form className="conditions">
               <input
