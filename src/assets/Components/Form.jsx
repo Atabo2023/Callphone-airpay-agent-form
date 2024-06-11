@@ -81,63 +81,63 @@ function Form() {
       <div className="row">
         <div className="column1">
           <div className="AgentsTerms">
-            <p className="terms">
+            <li className="terms">
               To express insterest either identify yourself as a potential agent
-              or reach out to us through contact form
-            </p>
-            <p>
+              or reach out to us through <p>contact form</p>
+            </li>
+            <li>
               Ensure that your business location is valid and visible, with
               current foot traffic pr patronage, whether rented or owned.
-            </p>
-            <p>
+            </li>
+            <li>
               Provide persional and business data to fill out our agent
               registration form
-            </p>
-            <p>
+            </li>
+            <li>
               Provide copies of proof of ID, proof of address(utility bill),
               signed guarantors form, signed agency agreement form
-            </p>
+            </li>
 
             <h2>TERMS AND CONDITIONS</h2>
-            <p>
+            <li>
               Terminals are deployed nwith three month's and will be retrieved
               after one month of poor usage.
-            </p>
-            <p>
+            </li>
+            <li>
               Agents are required to do a minimum of 20 card transaction valued
               at a minimum total of two hundred thousand naira only daily.
-            </p>
-            <p>
+            </li>
+            <li>
               transactions are settled directly into agents' airpay wallent
               instantly
-            </p>
-            <p>
+            </li>
+            <li>
               Terminal/accessories/Sim cards are not to be used for
               fradulent/money laundering transactionsand merchants are liable
               for any losses due to such activity
-            </p>
-            <p>
+            </li>
+            <li>
               The agent is liable for any damange to the terminal/unauthorized
               use of Sim card in the terminal/usage of charge not issued by
               Callphone and or charging with a generator.
-            </p>
-            <p>
+            </li>
+            <li>
               Callphone limited is not liable for any loss or damage caused by
               transactions failure by third parties in the processing cycle
-            </p>
-            <p>
+            </li>
+            <li>
               Agent is liable for the cost of replacement of the terminal and
               accessories where it is lost or maliciously damaged.
-            </p>
-            <p>
+            </li>
+            <li>
               Callphone reserve the right of set-off from settlement of
               transaction
-            </p>
-            <p>
+            </li>
+            <li>
               If the terminal and accessory is not returned at retrieval
               request; Callphone reserve the right to charge merchant value of
               asset for replacement
-            </p>
+            </li>
             <form className="conditions">
               <input
                 type="checkbox"
