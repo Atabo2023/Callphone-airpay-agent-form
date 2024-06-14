@@ -103,7 +103,7 @@ function Form() {
                 signed guarantors form, signed agency agreement form
               </li>
 
-              <h2>TERMS AND CONDITIONS</h2>
+              <h2 className="heading">TERMS AND CONDITIONS</h2>
               <li>
                 Terminals are deployed nwith three month's and will be retrieved
                 after one month of poor usage.
@@ -304,7 +304,7 @@ function Form() {
                 type="text"
                 id="first name"
                 name="first name"
-                placeholder="first name"
+                placeholder="First name"
               />
               <br />
               <label htmlFor="phoneNumber">Phone number</label>
