@@ -6,14 +6,16 @@ const Heading = () => {
       <div
         style={{
           backgroundColor: " #4834d4",
-          height: "15vh",
+          height: "20vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
+          // alignItems: "center",
+          textAlign: "center",
           fontFamily: "roboto",
           color: "#fff",
           fontSize: "1.5rem",
+          marginBottom: "1rem",
         }}
       >
         <h2>Wants to become an agent?</h2>

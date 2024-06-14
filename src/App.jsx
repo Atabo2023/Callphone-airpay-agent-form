@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./assets/Components/Navbar";
+// import Navbar from "./assets/Components/Navbar";
 import Heading from "./assets/Components/Heading";
 import { Formik } from "formik";
 // import { Form } from "formik";
@@ -9,7 +9,7 @@ import Form from "./assets/Components/Form";
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Heading />
       <Formik />
       <Form />

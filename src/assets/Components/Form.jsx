@@ -1,9 +1,9 @@
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Heading from "./Heading";
 import { useFormik } from "formik";
 import App from "../../App";
-// import react from "react";
-import React, { useState, useRef, createRef } from "react";
+// import anxios from "anxios";
+import React, { useState, useRef, useEffect } from "react";
 
 const initialValues = {
   AgentFullName: "",
@@ -76,94 +76,99 @@ function Form() {
 
   // const handlekeyDown = e;
 
+  // getcountry= () => {
+  //   anxios.get (https://nigeria-states-towns-lga.onrender.com/api/all).then
+  // }
+
   return (
     <>
       <div className="row">
-        <div className="column1">
-          <div className="AgentsTerms">
-            <li className="terms">
-              To express insterest either identify yourself as a potential agent
-              or reach out to us through contact form
-            </li>
-            <li>
-              Ensure that your business location is valid and visible, with
-              current foot traffic pr patronage, whether rented or owned.
-            </li>
-            <li>
-              Provide persional and business data to fill out our agent
-              registration form
-            </li>
-            <li>
-              Provide copies of proof of ID, proof of address(utility bill),
-              signed guarantors form, signed agency agreement form
-            </li>
+        <div className="card">
+          <div className="column1">
+            <div className="AgentsTerms">
+              <li className="terms">
+                To express insterest either identify yourself as a potential
+                agent or reach out to us through contact form
+              </li>
+              <li>
+                Ensure that your business location is valid and visible, with
+                current foot traffic pr patronage, whether rented or owned.
+              </li>
+              <li>
+                Provide persional and business data to fill out our agent
+                registration form
+              </li>
+              <li>
+                Provide copies of proof of ID, proof of address(utility bill),
+                signed guarantors form, signed agency agreement form
+              </li>
 
-            <h2>TERMS AND CONDITIONS</h2>
-            <li>
-              Terminals are deployed nwith three month's and will be retrieved
-              after one month of poor usage.
-            </li>
-            <li>
-              Agents are required to do a minimum of 20 card transaction valued
-              at a minimum total of two hundred thousand naira only daily.
-            </li>
-            <li>
-              transactions are settled directly into agents' airpay wallent
-              instantly
-            </li>
-            <li>
-              Terminal/accessories/Sim cards are not to be used for
-              fradulent/money laundering transactionsand merchants are liable
-              for any losses due to such activity
-            </li>
-            <li>
-              The agent is liable for any damange to the terminal/unauthorized
-              use of Sim card in the terminal/usage of charge not issued by
-              Callphone and or charging with a generator.
-            </li>
-            <li>
-              Callphone limited is not liable for any loss or damage caused by
-              transactions failure by third parties in the processing cycle
-            </li>
-            <li>
-              Agent is liable for the cost of replacement of the terminal and
-              accessories where it is lost or maliciously damaged.
-            </li>
-            <li>
-              Callphone reserve the right of set-off from settlement of
-              transaction
-            </li>
-            <li>
-              If the terminal and accessory is not returned at retrieval
-              request; Callphone reserve the right to charge merchant value of
-              asset for replacement
-            </li>
-            <li>
-              An agent must be able to render financial service and should be
-              able to
-            </li>
-            <li>
-              commit a minimum working capital of 50,000 (if a non register
-              business) and 250, 000 (if a Registered business)
-            </li>
-            <form className="conditions">
-              <input
-                type="checkbox"
-                id="terms"
-                name="terms"
-                value="condition"
-              />
-              <label htmlFor="terms">
-                {" "}
-                I agreed to the terms and conditions
-              </label>
-              <br></br>
-            </form>
-
-            <p></p>
+              <h2>TERMS AND CONDITIONS</h2>
+              <li>
+                Terminals are deployed nwith three month's and will be retrieved
+                after one month of poor usage.
+              </li>
+              <li>
+                Agents are required to do a minimum of 20 card transaction
+                valued at a minimum total of two hundred thousand naira only
+                daily.
+              </li>
+              <li>
+                transactions are settled directly into agents' airpay wallent
+                instantly
+              </li>
+              <li>
+                Terminal/accessories/Sim cards are not to be used for
+                fradulent/money laundering transactionsand merchants are liable
+                for any losses due to such activity
+              </li>
+              <li>
+                The agent is liable for any damange to the terminal/unauthorized
+                use of Sim card in the terminal/usage of charge not issued by
+                Callphone and or charging with a generator.
+              </li>
+              <li>
+                Callphone limited is not liable for any loss or damage caused by
+                transactions failure by third parties in the processing cycle
+              </li>
+              <li>
+                Agent is liable for the cost of replacement of the terminal and
+                accessories where it is lost or maliciously damaged.
+              </li>
+              <li>
+                Callphone reserve the right of set-off from settlement of
+                transaction
+              </li>
+              <li>
+                If the terminal and accessory is not returned at retrieval
+                request; Callphone reserve the right to charge merchant value of
+                asset for replacement
+              </li>
+              <li>
+                An agent must be able to render financial service and should be
+                able to
+              </li>
+              <li>
+                commit a minimum working capital of 50,000 (if a non register
+                business) and 250, 000 (if a Registered business)
+              </li>
+              <form className="conditions">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  name="terms"
+                  value="condition"
+                />
+                <label htmlFor="terms">
+                  {" "}
+                  I agreed to the terms and conditions
+                </label>
+                <br></br>
+              </form>
+            </div>
           </div>
         </div>
-
+        {/* <div className="card1"> */}
         <div className="column2">
           <div className="form" onSubmit={handleSubmit}>
             {/* <form className="CallphoneAirpayAgentForm">
@@ -372,7 +377,7 @@ function Form() {
                 placeholder="NIN"
               />
               <br />
-              <button onClick={handleSubmit}>next</button>
+              <button onClick={handleSubmit}>Next</button>
             </form>
           </div>
         </div>
