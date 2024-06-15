@@ -329,33 +329,31 @@ function Form() {
               <br />
               <label htmlFor="state">State</label>
               <br />
-              <input
-                className="inputField"
-                type="text"
-                id="state"
+              <select className="inputField" id="state">
+                <option value="Select State">Select State</option>
+                {/* type="text"
+                
                 name="state"
-                placeholder="select"
-              />
+                placeholder="select" */}
+              </select>
               <br />
               <label htmlFor="city">City</label>
               <br />
-              <input
-                className="inputField"
-                type="text"
-                id="city"
-                name="city"
-                placeholder="select"
-              />
+              <select className="inputField" id="city">
+                <option value="Select City">Select City</option>
+
+                {/* type="text" name="city" placeholder="select" */}
+              </select>
               <br />
               <label htmlFor="LGA">L.G.A</label>
               <br />
-              <input
-                className="inputField"
-                type="text"
-                id="LGA"
+              <select className="inputField" id="LGA">
+                <option value="Select LGA">Select State</option>
+                {/* type="text"
+                
                 name="LGA"
-                placeholder="select"
-              />
+                placeholder="select" */}
+              </select>
               <br />
               <label htmlFor="bvn">BVN</label>
               <br />
