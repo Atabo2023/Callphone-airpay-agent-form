@@ -297,8 +297,6 @@ function Form() {
                 placeholder="Surname"
               />
               <br />
-              <label htmlFor="FirstName">First name</label>
-              <br />
               <input
                 className="inputField"
                 type="text"
@@ -306,6 +304,8 @@ function Form() {
                 name="first name"
                 placeholder="First name"
               />
+              <label htmlFor="FirstName">First name</label>
+              <br />
               <br />
               <label htmlFor="phoneNumber">Phone number</label>
               <br />
@@ -375,6 +375,15 @@ function Form() {
                 placeholder="NIN"
               />
               <br />
+              <label htmlFor="experince">
+                Do you have previous experience of agency banking:
+              </label>
+              <br />
+              <select className="inputField" id="LGA">
+                <option value="Select LGA">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
               <button onClick={handleSubmit}>Next</button>
             </form>
           </div>
