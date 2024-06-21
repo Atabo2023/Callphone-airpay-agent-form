@@ -207,10 +207,10 @@ h3 {
 
 .formBox {
   color: black;
-  font-weight: 500;
+  font-weight: 400;
   background-color: #f8f7f954;
   padding: 3rem;
-  width: 32vw;
+  width: 34vw;
   display: flex;
   /* margin-top: 1.8rem; */
   flex-direction: column;
@@ -221,6 +221,7 @@ h3 {
     font-weight: normal;
     color: #555;
     /* padding: 1rem; */
+    padding-bottom: 0.2rem;
     border: none;
     outline: none;
     background-color: transparent;
@@ -228,8 +229,54 @@ h3 {
 
     &::placeholder {
       color: black;
+      font-weight: 700;
     }
   }
+}
+
+.select {
+  font-weight: normal;
+  color: #555;
+  /* padding: 1rem; */
+  padding-bottom: 0.2rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-top: 1px solid black;
+}
+
+.FirstName {
+  font-size: 4rem;
+}
+
+.set {
+  /* padding-top: 0.5rem; */
+  padding-bottom: 1.5rem;
+}
+
+.seletBox {
+  color: black;
+  font-weight: 600;
+  background-color: #f8f7f954;
+  /* padding: 3rem; */
+  /* width: 32vw; */
+  display: flex;
+  /* margin-top: 1.8rem; */
+  flex-direction: column;
+  justify-content: center;
+  /* border-radius: 5rem; */
+}
+
+/* .city {
+  padding-bottom: 1.5rem;
+} */
+
+.input {
+  width: 16%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /* border-bottom: 1px solid black; */
 }
 
 button {

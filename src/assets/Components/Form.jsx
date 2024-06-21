@@ -287,7 +287,7 @@ function Form() {
                 </p> */}
               </div>
               <h3>Personal Information</h3>
-              <label htmlFor="lastName">Last name</label>
+              <label htmlFor="title">Last name</label>
               <br />
               <input
                 className="inputField"
@@ -304,10 +304,10 @@ function Form() {
                 name="first name"
                 placeholder="First name"
               />
-              <label htmlFor="FirstName">First name</label>
+              <label htmlFor="title">First name</label>
               <br />
               <br />
-              <label htmlFor="phoneNumber">Phone number</label>
+              <label htmlFor="title">Phone number</label>
               <br />
               <input
                 className="inputField"
@@ -317,8 +317,6 @@ function Form() {
                 placeholder="+234"
               />
               <br />
-              <label htmlFor="homeAddress">Home Address</label>
-              <br />
               <input
                 className="inputField"
                 type="text"
@@ -326,36 +324,47 @@ function Form() {
                 name="Home address"
                 placeholder="Home address"
               />
+              <label htmlFor="title">Home Address</label>
+              <br />
+              <br />
+              {/* <div></div> */}
+              <input className="inputField" />
               <br />
               <label htmlFor="state">State</label>
-              <br />
-              <select className="inputField" id="state">
-                <option value="Select State">Select State</option>
-                {/* type="text"
-                
-                name="state"
-                placeholder="select" */}
+              <select className="select">
+                <option value="select state">Select State</option>
+                {/* <option value="select state">kogi</option> */}
               </select>
-              <br />
-              <label htmlFor="city">City</label>
-              <br />
-              <select className="inputField" id="city">
-                <option value="Select City">Select City</option>
 
-                {/* type="text" name="city" placeholder="select" */}
-              </select>
               <br />
-              <label htmlFor="LGA">L.G.A</label>
               <br />
-              <select className="inputField" id="LGA">
+              <label htmlFor="title" className="set">
+                City
+              </label>
+              <div className="seletBox">
+                <select className="inputField" id="state">
+                  <option value="Select State">Select City</option>
+                </select>
+                {/* <br /> */}
+                <br />
+                <label htmlFor="title" className="LGA">
+                  L.G.A
+                </label>
+                <select className="select" id="city">
+                  <option value="Select City">Select LGA</option>
+
+                  {/* type="text" name="city" placeholder="select" */}
+                </select>
+              </div>
+              <br />
+              {/* <select className="select" id="LGA">
                 <option value="Select LGA">Select State</option>
-                {/* type="text"
                 
-                name="LGA"
-                placeholder="select" */}
+                
+              
               </select>
-              <br />
-              <label htmlFor="bvn">BVN</label>
+              <br /> */}
+              <label htmlFor="title">BVN</label>
               <br />
               <input
                 className="inputField"
@@ -365,21 +374,21 @@ function Form() {
                 placeholder="BVN"
               />
               <br />
-              <label htmlFor="nin">NIN Number</label>
-              <br />
               <input
                 className="inputField"
                 type="text"
                 id="nin"
                 name="nin"
-                placeholder="NIN"
+                placeholder="Nin number"
               />
+              <label htmlFor="title">NIN Number</label>
+              <br />
               <br />
               <label htmlFor="experince">
                 Do you have previous experience of agency banking:
               </label>
               <br />
-              <select className="inputField" id="LGA">
+              <select className="input" id="LGA">
                 <option value="Select LGA">Select</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
