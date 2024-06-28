@@ -599,3 +599,11 @@ export default Form;
 //       event.preventDefault();
 //       if (initialValues && initialValues.current) {
 //         initialValues.current.focus();
+
+// echo "# Airpay-registration-form" >> README.md
+// git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/Atabo2023/Airpay-registration-form.git
+// git push -u origin main
