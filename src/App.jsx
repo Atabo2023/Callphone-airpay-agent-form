@@ -4,6 +4,7 @@ import "./App.css";
 import Heading from "./assets/Components/Heading";
 import { Formik } from "formik";
 // import { Form } from "formik";
+// import Endpoint from "./assets/Components/Endpoint";
 import Form from "./assets/Components/Form";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Heading />
       <Formik />
       <Form />
+      {/* <Endpoint /> */}
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 const Heading = () => {
   return (
@@ -6,7 +6,7 @@ const Heading = () => {
       <div
         style={{
           backgroundColor: " #4834d4",
-          height: "20vh",
+          height: "22vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -18,8 +18,10 @@ const Heading = () => {
           marginBottom: "1rem",
         }}
       >
-        <h2>Wants to become an agent?</h2>
-        <p>fill the form below to get your journey started with airpay</p>
+        <h2>Want to become an agent?</h2>
+        <p>
+          Fill the form below to get your journey started as an Airpay Agent
+        </p>
       </div>
     </>
   );
